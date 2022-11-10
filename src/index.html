@@ -15,47 +15,78 @@
     <h1 class="text-center text-5xl text-white relative top-6">fremtidens bolig</h1>
     <main style="height: 90vh; width: 100vw;" class="m-0  flex flex-col">
         <!-- sørger for kortet sidder rigtigt -->
-        <div style="height: 80vh; width: 100vw; " class="relative flex items-center justify-center top-20">
+        <div style="height: 80vh; width: 100vw;" class="relative flex items-center justify-center top-20">
             <!-- kortets form, baggrund, og størrelse -->
-            <div style="width: 80vw; height: 80vh;" class="bg-slate-600 rounded-3xl shadow-slate-900 shadow-2xl relative">
+            <div style="width: 80vw; height: 80vh;" class="bg-slate-600 rounded-3xl relative shadow">
 
-                <!-- kortets headers -->
-                <div class="flex gap-x-7 relative left-20 text-4xl text-white opacity-100">
-                    <a href="index.html" class="border-b-2 hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000">info</a>
-                    <a href="styring.html" class="hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000" >Styring</a>
-                </div>
+            <!-- kortets headers -->
+            <div class="flex gap-x-7 relative left-20 top-10 text-4xl text-white opacity-100">
+                <a href="index.html" class="border-b-2 hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000">Info</a>
+                <a href="kamera.html" class="hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000" >Kamera</a>
+                <a href="galleri.html" class="hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000" >Galleri</a>
+            </div>
+                <div class="relative grid grid-cols-3 grid-rows-2 place-items-center" style="top: 100px; ">
+                    <!-- strøm status -->
+                    <button onclick="powerOff()">
+                        <p class="text-center text-white text-4xl" >Strømstatus</p>
+                        <div class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small" id="power">
+                            <p style="font-size: 0.6em;" id="powerText">tændt</p>
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                    </button>
+                    <!-- internet status -->
+                    <button onclick="netOff()">
+                        <p class="text-center text-white text-3xl">Netværk</p>
+                        <div  class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small" id="net">
+                            <p style="font-size: 0.6em;" id="netText">tændt</p>
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                    </button>
+                    <!-- varme -->
+                    <button onclick="warmOff()">
+                        <p class="text-center text-white text-4xl " >Varme</p>
+                        <div  class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small" id="warm">                                                
+                            <p style="font-size: 0.6em;" id="warmText">tændt</p>
+                            <i class="fa-solid fa-fire"></i>
+                         </div>
+                    </button>
 
-                <div class="relative grid grid-cols-3 grid-rows-2 place-items-center" style="top: 50px;">
+                    <!-- dør -->
+                    <button onclick="doorLock()">
+                        <p class="text-center text-white text-4xl" >dør</p>
+                        <div  class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small" id="door">                                                
+                            <i class="fa-solid fa-lock" id="doorLock"></i>
+                         </div>
+                        
+                    </button>
                     <!-- luft fugtigthed -->
+                    <button>
+                        <p class="text-center text-white text-4xl " id="fugt">Fugtighed</p>
+                        <div  class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small">                                                
+                            <i class="fa-light fa-droplet" id="fugtighed"></i>
+                         </div>
+                        
+                    </button>
+                    <!-- temperatur -->
+                    <button>
+                        <p class="text-center text-white text-4xl " id="temparatur">Temperatur</p>
+                        <div  class="internetstrømvarmegrøn rounded-3xl bg-slate-700 shadow-small">                                                
+                            <i class="fa-solid fa-temperature-three-quarters" id="temp"></i>
+                         </div>
+                        
+                    </button>
+
+
+
+
+
+                    <!-- sikkerhedskamera
                     <div>
-                        <p class="text-center text-white text-3xl">LuftFugtighed</p>
-                            <div style="height:300px; width:400px;" class="rounded-3xl bg-slate-700">
-                                
-                                <div style="height: 60%; width: 100%; bottom: -120px;" class="relative bg-blue-600 rounded-b-3xl text-slate-400 text-center text-5xl content-center" id="fugtighed"></div>
-                            </div>
-                    </div> 
-                    <!-- sikkerhedskamera -->
-                    <div class="col-start-1 row-start-2">
-                        <p class="text-center text-white text-3xl">sikkerhedskamera</p>
+                        <p class="text-center text-white text-4xl">sikkerhedskamera</p>
                         <div style="height:300px; width:400px;">
                             <img src="billeder/outside.jpg" style="height:300px; width:400px;" class="rounded-3xl">
                         </div>
-                    </div>
-                    <!-- strøm status -->
-                    <div>
-                        <p class="text-center text-white text-3xl ">strømstatus</p>
-                        <div style="height:300px; width:400px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 5em; color: green;" class="rounded-3xl bg-slate-700">
-                            <p style="font-size: 0.6em;">Aktiv</p>
-                            <i class="fa-solid fa-plug-circle-check"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- temperatur -->
-                <div>
-                    <i class="fa-solid fa-temperature-three-quarters" style="font-size: 4em; position: absolute; bottom: 0px; right: 15px;" id="temp"></i>
-                </div>
-            </div>
+                    </div> -->
         </div>
     </main>
 </body>

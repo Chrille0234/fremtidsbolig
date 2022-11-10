@@ -6,6 +6,54 @@
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
+.internetstrømvarmegrøn{
+  height:300px; 
+  width:400px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 5em;
+  color: green; 
+}
+.internetstrømvarmerød{
+  height:300px; 
+  width:400px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 5em;
+  color: red; 
+}
+.shadow{
+  box-shadow: 0px 0px 50px white;
+}
+.shadow-small{
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.226);
+}
+
+
+
+.kamera, .kamera img{
+  height: 60vh; 
+  width: 35vw; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  border-radius: inherit;
+}
+
+.galleri, .galleri img{
+  height:300px; 
+  width:500px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  border-radius: inherit;
+}
 
 *,
 ::before,
