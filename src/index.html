@@ -11,7 +11,7 @@
     <title>Tw</title>
     
 </head>
-<body class="m-0 bg-slate-800" onload="skiftTemp()">
+<body class="m-0 bg-slate-800" onload="runAll()">
     <h1 class="text-center text-5xl text-white relative top-6">fremtidens bolig</h1>
     <main style="height: 90vh; width: 100vw;" class="m-0  flex flex-col">
         <!-- sørger for kortet sidder rigtigt -->
@@ -25,17 +25,35 @@
                     <a href="styring.html" class="hover:border-b-2 hover:opacity-60 hover:transition-all duration-3000" >Styring</a>
                 </div>
 
-
-                <!-- luft fugtigthed -->
-                <div style="height:300px; width:400px; background-color: black;" class="rounded-3xl relative top-20 left-20">
-                    <p class="text-white text-center text-5xl border-b-2 ">LuftFugtighed</p>
-                    <div style="height: 100px; width: 400px; background-color: blue;" class="absolute bottom-0"></div>
+                <div class="relative grid grid-cols-3 grid-rows-2 place-items-center" style="top: 50px;">
+                    <!-- luft fugtigthed -->
+                    <div>
+                        <p class="text-center text-white text-3xl">LuftFugtighed</p>
+                            <div style="height:300px; width:400px;" class="rounded-3xl bg-slate-700">
+                                
+                                <div style="height: 60%; width: 100%; bottom: -120px;" class="relative bg-blue-600 rounded-b-3xl text-slate-400 text-center text-5xl content-center" id="fugtighed"></div>
+                            </div>
+                    </div> 
+                    <!-- sikkerhedskamera -->
+                    <div class="col-start-1 row-start-2">
+                        <p class="text-center text-white text-3xl">sikkerhedskamera</p>
+                        <div style="height:300px; width:400px;">
+                            <img src="billeder/outside.jpg" style="height:300px; width:400px;" class="rounded-3xl">
+                        </div>
+                    </div>
+                    <!-- strøm status -->
+                    <div>
+                        <p class="text-center text-white text-3xl ">strømstatus</p>
+                        <div style="height:300px; width:400px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 5em; color: green;" class="rounded-3xl bg-slate-700">
+                            <p style="font-size: 0.6em;">Aktiv</p>
+                            <i class="fa-solid fa-plug-circle-check"></i>
+                        </div>
+                    </div>
                 </div>
-
 
                 <!-- temperatur -->
                 <div>
-                    <i class="fa-solid fa-temperature-three-quarters" style="font-size: 7em; position: absolute; bottom: 0px; right: 15px;" id="temp"></i>
+                    <i class="fa-solid fa-temperature-three-quarters" style="font-size: 4em; position: absolute; bottom: 0px; right: 15px;" id="temp"></i>
                 </div>
             </div>
         </div>
