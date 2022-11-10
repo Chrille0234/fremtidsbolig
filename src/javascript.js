@@ -7,19 +7,58 @@ function runAll(){
 
 function skiftTemp() {
     let x = Math.floor(Math.random() * 20) + 10;
+    var skala = document.getElementById("tempskala")
+    var temp = document.getElementById("temp");
+    var skalaWrapper = document.getElementById("skalaWrapper");
 
     
-    if (x > 17){document.getElementById("temp").innerHTML = x + "°";}
-    // sørger for at temperaturen er over 17 grader
-    else{ x = x + 10; document.getElementById("temp").innerHTML = x + "°";}
+    if (x < 19){
+        temp.innerHTML = x + "°";
+        skala.innerHTML = "for lav"
+        skalaWrapper.style.color = "blue"
+    }
+    else if(x > 19 && x < 22){
+        temp.innerHTML = x + "°";
+        skala.innerHTML = "ok"
+        skalaWrapper.style.color = "yellow"
+    }
+    else if(x > 22 && x < 25) {
+        temp.innerHTML = x + "°";
+        skala.innerHTML = "god"
+        skalaWrapper.style.color = "green"
+    }
+    else if(x > 25) {
+        temp.innerHTML = x + "°";
+        skala.innerHTML = "for varmt";
+        skalaWrapper.style.color = "red"
+    }
+
+
 }
 
 function skiftFugtighed() {
     let x = Math.floor(Math.random() * 20) + 10;
-
+     x = (x + 10)*2; 
+    var fugt = document.getElementById("fugtighed");
+    var fugtskala = document.getElementById("fugtskala");
+    var fugtWrapper = document.getElementById("fugtWrapper");
     
-    x = (x + 10)*2; 
-    document.getElementById("fugtighed").innerHTML = x + "%";
+    if (x < 50){
+        fugt.innerHTML = x + "%";
+        fugtskala.innerHTML = "for lav"
+        fugtWrapper.style.color = "red"
+
+    }
+    else if (x > 70){
+        fugt.innerHTML = x + "%";
+        fugtskala.innerHTML = "for høj"
+        fugtWrapper.style.color = "red"
+    }
+    else{
+        fugt.innerHTML = x + "%";
+        fugtskala.innerHTML = "god"
+        fugtWrapper.style.color = "green"
+    }
 }
 
 function powerOff() {
