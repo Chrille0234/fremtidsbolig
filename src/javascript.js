@@ -1,4 +1,4 @@
-setInterval(runAll, 5000);
+setInterval(runAll, 3000);
 function runAll(){
     skiftFugtighed();
     skiftTemp();
